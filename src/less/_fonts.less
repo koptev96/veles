@@ -1,0 +1,92 @@
+@font-family: '';
+@font-black-name: '';
+@font-extrabold-name: '';
+@font-bold-name: '';
+@font-semibold-name: '';
+@font-medium-name: '';
+@font-regular-name: '';
+@font-light-name: '';
+@font-path: "../fonts";
+
+.f-black() {
+  font-style: normal;
+  font-weight: 900;
+}
+.f-extrabold() {
+  font-style: normal;
+  font-weight: 800;
+}
+
+.f-bold() {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.f-semibold() {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.f-medium() {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.f-regular() {
+  font-weight: normal;
+  font-weight: 400;
+}
+
+.f-light() {
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: @font-family;
+  src:  url('@{font-path}/@{font-black-name}.woff2') format('woff2'),
+        url('@{font-path}/@{font-black-name}.woff') format('woff');
+  .f-black();
+}
+
+@font-face {
+  font-family: @font-family;
+  src:  url('@{font-path}/@{font-extrabold-name}.woff2') format('woff2'),
+        url('@{font-path}/@{font-extrabold-name}.woff') format('woff');
+  .f-extrabold();
+}
+
+@font-face {
+  font-family: @font-family;
+  src: url('@{font-path}/@{font-bold-name}.woff2') format('woff2'),
+       url('@{font-path}/@{font-bold-name}.woff') format('woff');
+  .f-bold();
+}
+
+@font-face {
+  font-family: @font-family;
+  src:  url('@{font-path}/@{font-semibold-name}.woff2') format('woff2'),
+        url('@{font-path}/@{font-semibold-name}.woff') format('woff');
+  .f-semibold();
+}
+
+@font-face {
+  font-family: @font-family;
+  src:  url('@{font-path}/@{font-medium-name}.woff2') format('woff2'),
+        url('@{font-path}/@{font-medium-name}.woff') format('woff');
+  .f-medium();
+}
+
+@font-face {
+  font-family: @font-family;
+  src:  url('@{font-path}/@{font-regular-name}.woff2') format('woff2'),
+        url('@{font-path}/@{font-regular-name}.woff') format('woff');
+  .f-regular();
+}
+
+@font-face {
+  font-family: @font-family;
+  src:  url('@{font-path}/@{font-light-name}.woff2') format('woff2'),
+        url('@{font-path}/@{font-light-name}.woff') format('woff');
+  .f-light();
+}
