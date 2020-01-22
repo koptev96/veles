@@ -56,6 +56,7 @@
     "media-query-list-comma-space-after": "always",
     "at-rule-empty-line-before": "always",
     "at-rule-name-case": "lower",
+    "color-hex-length": "short",
     "order/order": [
 			"custom-properties",
 			"declarations"

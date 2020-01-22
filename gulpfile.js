@@ -77,39 +77,39 @@ function html() {
 		.pipe(browserSync.stream());
 }
       
-function css() {
-  return gulp.src('src/css/in.css')
-    .pipe(debug({title: 'stylelint'}))
-    .pipe(stylelint({
-        reporters: [
-            {formatter: 'string', console: true}
-        ]    
-    }))
-    .pipe(plumber({
-        errorHandler: notify.onError(function (error) {
-            return {
-                title: 'Styles',
-                message: error.message
-            };
-        })
-    }))
-    .pipe(sourcemaps.init())
-    .pipe(postcss([assets({
-        loadPaths: ['src/img/'],
-        relativeTo: 'src/css'
-      })]))
-    .pipe(postcss([postcssPresetEnv({ stage: 0 })]))
-    .pipe(postcss([postcssShort()]))
-    .pipe(postcss([atImport()]))
-    .pipe(postcss([autoprefixer()]))
-    .pipe(postcss([cssnano]))
-    .pipe(debug({title: 'min'}))
-    .pipe(rename('all.min.css'))
-    .pipe(debug({title: 'min css'}))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(browserSync.stream());
-}
+// function css() {
+  // return gulp.src('src/css/in.css')
+    // .pipe(debug({title: 'stylelint'}))
+    // .pipe(stylelint({
+        // reporters: [
+            // {formatter: 'string', console: true}
+        // ]    
+    // }))
+    // .pipe(plumber({
+        // errorHandler: notify.onError(function (error) {
+            // return {
+                // title: 'Styles',
+                // message: error.message
+            // };
+        // })
+    // }))
+    // .pipe(sourcemaps.init())
+    // .pipe(postcss([assets({
+        // loadPaths: ['src/img/'],
+        // relativeTo: 'src/css'
+      // })]))
+    // .pipe(postcss([postcssPresetEnv({ stage: 0 })]))
+    // .pipe(postcss([postcssShort()]))
+    // .pipe(postcss([atImport()]))
+    // .pipe(postcss([autoprefixer()]))
+    // .pipe(postcss([cssnano]))
+    // .pipe(debug({title: 'min'}))
+    // .pipe(rename('all.min.css'))
+    // .pipe(debug({title: 'min css'}))
+    // .pipe(sourcemaps.write('.'))
+    // .pipe(gulp.dest('dist/css'))
+    // .pipe(browserSync.stream());
+// }
 
 function server() {
     browserSync.init({
