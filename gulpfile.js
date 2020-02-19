@@ -28,7 +28,8 @@ let gulp = require('gulp'),
     debug = require('gulp-debug'),
     easyimport = require('postcss-easy-import'),
     sugarss = require('sugarss'),
-    atImport = require("postcss-import");
+    atImport = require("postcss-import"),
+	eslint = require('gulp-eslint');
 
 function clean() {
     return del('build/');
@@ -74,6 +75,15 @@ function html() {
 		.pipe(posthtml([
             include()]))
         .pipe(gulp.dest('build/'))
+		.pipe(browserSync.stream());
+}
+
+function js () {
+	return gulp.src('src/js/*.js')
+		.pipe(eslint())
+		.pipe(eslint.format( ))
+		.pipe(gulp.dest('build/'))
+		.pipe(eslint.failAfterError())
 		.pipe(browserSync.stream());
 }
       
