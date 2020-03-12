@@ -17,6 +17,8 @@ ehthumbs_vista.db
 $RECYCLE.BIN/
 node_modules/*
 build
+dist
+src/css
 
 # Windows Installer files
 *.cab
